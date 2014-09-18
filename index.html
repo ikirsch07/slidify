@@ -36,7 +36,7 @@
         <slide class="title-slide segue nobackground">
   <hgroup class="auto-fadein">
     <h1>Calculator</h1>
-    <h2>A simple calulator for scalars and vectors</h2>
+    <h2>A simple calculator for scalars and vectors</h2>
     <p>I.K.<br/></p>
   </hgroup>
   <article></article>  
@@ -53,9 +53,15 @@
 
 <h3>Scalars</h3>
 
-<p>Basic arithmetic computations. Self-contained.</p>
+<p>Basic arithmetic computations. </p>
 
 <h3>Vectors</h3>
+
+<p>Length of a vector \((c_1,...,c_n)\): 
+\(|c|=\sqrt{\sum_{i=1}^n c_i^2}\)</p>
+
+<p>Scalar product:
+\(c.d = \sum_{i=1}^n c_i *d_i\)</p>
 
   </article>
   <!-- Presenter Notes -->
@@ -183,7 +189,21 @@ That makes it more readable.</p>
 <script src="http://slidifylibraries2.googlecode.com/git/inst/libraries/widgets/interactive/js/ace/js/ace.js"></script>
 <script src="http://slidifylibraries2.googlecode.com/git/inst/libraries/widgets/interactive/js/interactive.js"></script>
 
-  <script>  
+  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script> -->
+  <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="http://slidifylibraries2.googlecode.com/git/inst/libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<script>  
   $(function (){ 
     $("#example").popover(); 
     $("[rel='tooltip']").tooltip(); 
